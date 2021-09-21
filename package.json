@@ -1,0 +1,26 @@
+{
+  "name": "Hackathon-Group2-Sep2021-BackEnd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdiket/Hackathon-Group2-Sep2021-BackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdiket/Hackathon-Group2-Sep2021-BackEnd/issues"
+  },
+  "homepage": "https://github.com/jdiket/Hackathon-Group2-Sep2021-BackEnd#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  }
+}
