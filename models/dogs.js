@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dogSchema = mongoose.Schema({
     name: {type: String, title: 'Name', required: true},
-    location: {type: String, title: 'Location'},
+    location: mongoose.ObjectId,
     age: {type: Number, title: 'Age', required: true},
     photo: {type: String, title: 'Photo'},
     description: {type: String, title: 'Description'},

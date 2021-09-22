@@ -32,4 +32,6 @@ dogs.get('/:id', (req, res) => {
     })
 });
 
+// Filter Route
+
 module.exports = dogs;
