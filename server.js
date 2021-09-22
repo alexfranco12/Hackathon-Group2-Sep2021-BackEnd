@@ -46,9 +46,9 @@ mongoose.connection.once('open', () => {
 
 // Controllers
 const dogsController = require('./controllers/dogs.js');
-// const placesController = require('./controllers/places.js'); 
+const placesController = require('./controllers/places.js'); 
 app.use('/dogs', dogsController);
-// app.use('/places', placesController);
+app.use('/places', placesController);
 
 // LISTENER
 app.listen(PORT, () => { console.log('five by five on ', PORT) });
