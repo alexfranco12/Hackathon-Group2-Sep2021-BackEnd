@@ -16,7 +16,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 app.use(express.json);
 
 // CORS
-const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/'];
+const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/dogs'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
