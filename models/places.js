@@ -8,7 +8,8 @@ const placeSchema = mongoose.Schema({
         city: {type: String},
         state: {type: String},
         zip: {type: Number}
-    }
+    },
+    distance: {type: Number}
 });
 
 module.exports = mongoose.model('Place', placeSchema);
