@@ -32,6 +32,15 @@ dogs.get('/:id', (req, res) => {
     })
 });
 
-// Filter Route
+// Filter Routes
+// Filter by distance
+dogs.get('/distance/:id', (req, res) => {
+    Dog.find({ distance: { $lte: req.body.distance }}, (err, foundDogs) => {
+        if (err) {
+            res.status(400).json({ error: err.message })
+        }
+        res.status(200).json(foundDogs)
+    })
+});
 
 module.exports = dogs;
