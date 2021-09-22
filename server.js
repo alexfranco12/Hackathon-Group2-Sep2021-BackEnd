@@ -14,6 +14,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // MIDDLEWARE
 app.use(express.json);
+app.use(express.urlencoded({ extended: true }));
 
 // CORS
 const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/dogs'];
