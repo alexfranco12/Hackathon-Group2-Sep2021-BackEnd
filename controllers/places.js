@@ -2,7 +2,8 @@ const express = require('express');
 const places = express.Router();
 const Place = require('../models/places.js');
 
-// Create Route places.post('/', async (req, res) => {
+// Create Route
+places.post('/', async (req, res) => {
     Place.create(req.body, (error, createdPlace) => {
         if (error) {
             res.status(400).json({ error: error.message })
@@ -11,7 +12,8 @@ const Place = require('../models/places.js');
     })
 });
 
-// Index Route places.get('/', (req, res) => {
+// Index Route
+places.get('/', (req, res) => {
     Place.find({}, (err, foundPlaces) => {
         if (err) {
             res.status(400).json({ error: err.message })
@@ -20,7 +22,8 @@ const Place = require('../models/places.js');
     })
 });
 
-// Show/Detail Route places.get('/:id', (req, res) => {
+// Show/Detail Route
+places.get('/:id', (req, res) => {
     Place.findById(req.params.id, (err, foundPlace) => {
         if (err) {
             res.status(400).json({ error: err.message })
