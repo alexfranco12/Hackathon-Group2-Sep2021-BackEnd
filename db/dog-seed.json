@@ -3,7 +3,9 @@
     "name": "",
     "location": "",
     "age": ,
-    "photo": "",
+    "photo": [
+      ""
+    ],
     "tagline": "",
     "description": "",
     "breed": [
