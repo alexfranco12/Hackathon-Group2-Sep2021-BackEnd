@@ -15,8 +15,7 @@ db.on('connected', function () {
   console.log(`Connected to ${db.name} at ${db.host}:${db.port}`);
 });
 
-const Dogs = require('./models/dogs');
-const Places = require('./models/places');
+const Places = require('../models/places');
 
 (async function() {
 
@@ -32,7 +31,8 @@ const Places = require('./models/places');
                 state: 'NC',
                 zip: 27331
             },
-            distance: 6
+            distance: 6,
+            fee: 100
         }, {
             name: 'Cross Creek Animal Rescue',
             phone: '919-883-4653',
@@ -42,7 +42,8 @@ const Places = require('./models/places');
                 state: 'NC',
                 zip: 27331
             },
-            distance: 6
+            distance: 6,
+            fee: 100
         }, {
             name: 'Hero Shepherds Breeders',
             phone: '910-585-3565',
@@ -52,7 +53,8 @@ const Places = require('./models/places');
                 state: 'NC',
                 zip: 28334
             },
-            distance: 18
+            distance: 18,
+            fee: 175
         }, {
             name: 'Cumberland County Animal Rescue',
             phone: '910-321-6852',
@@ -62,27 +64,14 @@ const Places = require('./models/places');
                 state: 'NC',
                 zip: 28306
             },
-            distance: 3
+            distance: 3,
+            fee: 55
         }
     ]);
     
-    await Dogs.deleteMany({});
-    const dogs = await Dogs.create([
-      {
-          name: 'fd',
-          location: places[0],
-          age: 1,
-          photo: 'df',
-          description: 'fd',
-          breed: ['oh','hi','mark'],
-          size: 'XL',
-          color: 'fda'
-      } 
-    ]);
 
-    console.log(dogs)
-  console.log(places)
+    console.log(places)
 
-  process.exit();
+    process.exit();
 
 })();
