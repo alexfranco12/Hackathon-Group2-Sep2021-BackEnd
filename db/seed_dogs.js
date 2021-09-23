@@ -25,7 +25,7 @@ const Dogs = require('../models/dogs');
       {
         "name": "Tofu",
         "location": "Cross Creek Animal Rescue",
-        "age": "2 years",
+        "age": "2 years old",
         "photo": [
           "https://images.unsplash.com/photo-1597633425046-08f5110420b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
           "https://images.unsplash.com/photo-1600077029182-92ac8906f9a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
@@ -43,13 +43,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "white and brown"
+        "color": "Light Brown and White"
       }, {
         "name": "Maize",
         "location": "It Takes A Village Rescue",
-        "age": "4 years",
+        "age": "4 years old",
         "photo": [
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/239124330_1533772546967919_3819863549318109987_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=3p-l3ItWDzQAX-EEEAQ&_nc_ht=scontent-iad3-1.xx&oh=e419608e9db42d7fca5efafaec7199fd&oe=617297CC",
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/238852446_1532481047097069_6800064500516467821_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=pQJ7D3gtxToAX8OmYKP&_nc_ht=scontent-iad3-1.xx&oh=449fc348ec2d8cb5c6536d977eca0b8d&oe=61736FED",
@@ -58,7 +58,7 @@ const Dogs = require('../models/dogs');
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/238827579_1532480933763747_1685438134313547703_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=uTkRqtN3waIAX-Rzv0r&tn=4HS3O-UzYezkKbKK&_nc_ht=scontent-iad3-1.xx&oh=62cdfa5bee00c77111c78071e504ec2d&oe=61716ACC"
         ],
         "tagline": "Sweet girl, looking for love",
-        "description": "Maize came to us from a family that had to move somewhere she couldn't go too.  She has been an only dog with a house full of kids her whole life, and would do best without other dogs in the home.  A well-behaved sweetheart, Maize wants to find a forever home where she can play outside with kids and cuddle up on the couch after dinner.  Ask about a playdate!",
+        "description": "Maize came to us from a family that had to move where she couldn't go too.  She has been an only dog with a house full of kids her whole life, and would do best without other dogs in the home.  A well-behaved sweetheart, Maize wants to find a forever home where she can play outside with kids and cuddle up on the couch after dinner.  Ask about a playdate!",
         "breed": [
           "Staffordshire Terrier"
         ],
@@ -67,13 +67,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "female",
+        "sex": "Female",
         "fixed": true,
-        "color": "dappe with white"
+        "color": "Dapple with White"
       }, {
         "name": "Buster",
         "location": "It Takes A Village Rescue",
-        "age": "11 years",
+        "age": "11 years old",
         "photo": [
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/183824496_1463577153987459_4707440164824183097_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=zHnAKOcxh0sAX8cswO6&_nc_oc=AQl8hG5-qf5wToDWdDY4VGIHh-2c9yIq9QZEkKqolr1-DZwsHAMMLv0FUWR9sdJSC8Y&_nc_ht=scontent-iad3-1.xx&oh=7ff465537bf223de022f6177e1a09dab&oe=6172FA56",
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/184340659_1463577190654122_6736859339649637730_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=Ozw8GZWrqu8AX_hVhC-&_nc_ht=scontent-iad3-1.xx&oh=69968bece7421c8ddd33caaef43a352a&oe=617325CF",
@@ -91,13 +91,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "white and brown"
+        "color": "White and Brown"
       }, {
         "name": "Spencer",
         "location": "It Takes A Village Rescue",
-        "age": "4 months",
+        "age": "4 months old",
         "photo": [
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/163176034_1429676060710902_7572660260071297429_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=fn-KFWHx3GYAX80qD_q&_nc_ht=scontent-iad3-1.xx&oh=52881f1f83bb86da8e68574a54913c11&oe=6173EE62",
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/163842752_1429676047377570_3401862457245781985_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=hDwgwPcNw_QAX9DQ3bS&tn=4HS3O-UzYezkKbKK&_nc_ht=scontent-iad3-1.xx&oh=eea57100665b6039a874e04ec3f08b18&oe=61738748",
@@ -114,13 +114,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": false,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": false,
-        "color": "black and white"
+        "color": "Black and White"
       }, {
         "name": "Benny",
         "location": "Cross Creek Animal Rescue",
-        "age": "3 years",
+        "age": "3 years old",
         "photo": [
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/152362304_1410327189312456_3352690283363526939_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ASFaZW7iQ_cAX9IPmSF&_nc_ht=scontent-iad3-1.xx&oh=a243526c8a03ba3aedce356e697b2339&oe=6171CD06",
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/151856290_1410327075979134_5517661035788436642_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=IbWxp44yl3kAX9bNdpU&_nc_ht=scontent-iad3-1.xx&oh=872c474e72ee9048c1204c8b3e7cead5&oe=61714EAA",
@@ -129,7 +129,7 @@ const Dogs = require('../models/dogs');
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/152684254_1410327279312447_5862621330256430375_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=LDArnL1J5skAX_Er6Rk&tn=4HS3O-UzYezkKbKK&_nc_ht=scontent-iad3-1.xx&oh=456e1daae3911cf2862aef2f12e96382&oe=6170458A"
         ],
         "tagline": "A boy looking for a lap",
-        "description": "Benny can't wait to meet his forever companion.  Great with other dogs, but skittish around younger kids, Benny was found wandering near a river hungry and alone.  This sweet boy survived and has thrived since joining us and loves to snuggle next to you.  Very relaxed for his age, Benny would be great with older families that aren't very active.",
+        "description": "Benny can't wait to meet his forever companion!  Great with other dogs, but skittish around younger kids, Benny was found wandering near a river, hungry and alone.  This sweet boy survived and has thrived since joining us and loves to snuggle next to you.  Very relaxed for his age, Benny would be great with older families that aren't very active.",
         "breed": [
           "Lab", "Hound"
         ],
@@ -138,13 +138,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": false,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "brown and dapple"
+        "color": "Brown and Dapple"
       }, {
         "name": "Rocco",
         "location": "Making A Difference Rescue",
-        "age": "2 years",
+        "age": "2 years old",
         "photo": [
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/100558371_1186645611680616_3307077968416735232_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=PsuwDuCrDi4AX8PHCKj&_nc_ht=scontent-iad3-1.xx&oh=48cf22bedc4e897450d8fbf273995d63&oe=61713D7C",
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/102760184_1198727537139090_1730723941650125872_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ud0DbzPMwFoAX_QCbAF&tn=4HS3O-UzYezkKbKK&_nc_ht=scontent-iad3-1.xx&oh=fcba868a8cda737b9ddd0df9486857c2&oe=61730891",
@@ -153,22 +153,22 @@ const Dogs = require('../models/dogs');
           "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/100053782_1186645505013960_1222776579285843968_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=iEkHd6yBzFwAX8LYtac&_nc_ht=scontent-iad3-1.xx&oh=8357783ce6d5d0a2fa79e1b385fbc245&oe=617262AC"
         ],
         "tagline": "Loves to be outside",
-        "description": "Rocco hasn't had the best life and needs some good TLC.  Loves to be outside and should be in a home with plenty of space for him.  Unfortunately, Rocco was found neglected in someone's yard and did not get love.  But as you can see from his pictures, he has a great spirit and with patience will make a wonderful friend.",
+        "description": "Rocco hasn't had the best life and needs some good TLC.  Loves to be outside and should be in a home with plenty of space for him to move.  Unfortunately, Rocco was found neglected in someone's yard and did not get the love he deserves.  But, as you can see from his pictures, he has a great spirit and with patience will make a wonderful friend.",
         "breed": [
-          "Lab", "Shepher", "Terrier"
+          "Lab", "Shepherd", "Terrier"
         ],
         "weight": 37,
         "goodWithDogs": true,
         "goodWithKids": false,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "black, brown, and white"
+        "color": "Black, Brown, and White"
       }, {
         "name": "Namilla",
         "location": "Making A Difference Rescue",
-        "age": "9 year",
+        "age": "11 years old",
         "photo": [
           "https://images.unsplash.com/photo-1520038410233-7141be7e6f97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
           "https://images.unsplash.com/photo-1618265341355-d0e2d1fdf26b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1064&q=80",
@@ -177,7 +177,7 @@ const Dogs = require('../models/dogs');
           "https://images.unsplash.com/photo-1589935698791-5b0c81a0ce1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80"
         ],
         "tagline": "Looking to share your life",
-        "description": "Say hello to Namila! This gorgeous tiny girl is a recently retired show dog surrendered in order to help her find the best forever home out there! She’s a real sweetheart, ready to relax and be loved and adored by some lucky someone! At Namila’s small size and age, she should only go to an adult home with no children to deal with. If you’re looking for a precious girl for a best friend to share all good things in life with, please submit an adoption application for Namila!",
+        "description": "Say hello to Namila! This gorgeous tiny girl is a recently retired show dog surrendered in order to help her find the best forever home out there! She’s a real sweetheart, ready to relax and be loved and adored by some lucky someone! At Namila’s small size and advanced age, she should only go to an adult home with no children to deal with. If you’re looking for a precious girl for a best friend to share all good things in life with, please submit an adoption application for Namila!",
         "breed": [
           "Dachsund"
         ],
@@ -186,13 +186,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": false,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "female",
+        "sex": "Female",
         "fixed": true,
-        "color": "black and brown"
+        "color": "Black and Brown"
       }, {
         "name": "Lee",
         "location": "Cross Creek Animal Rescue",
-        "age": "12 years",
+        "age": "12 years old",
         "photo": [
           "https://images.unsplash.com/photo-1578133507770-a35cc3c786e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
           "https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
@@ -210,13 +210,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "light reddish brown"
+        "color": "Light Red-Brown"
       }, {
         "name": "Dave",
         "location": "Cumberland County Animal Rescue",
-        "age": "7 years",
+        "age": "7 years old",
         "photo": [
           "https://images.unsplash.com/photo-1605936635478-325b076414a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
           "https://images.unsplash.com/flagged/photo-1564754808205-ad6b1efed4af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
@@ -234,13 +234,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "male",
+        "sex": "Male",
         "fixed": true,
-        "color": "black and white"
+        "color": "Black and White"
       }, {
         "name": "Lemon",
         "location": "Cumberland County Animal Rescue",
-        "age": "6 years",
+        "age": "6 years old",
         "photo": [
           "https://images.unsplash.com/photo-1615919997258-e9719d98c94c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1107&q=80",
           "https://images.unsplash.com/photo-1562329203-b3f47596889e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=912&q=80",
@@ -258,13 +258,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "female",
+        "sex": "Female",
         "fixed": true,
-        "color": "golden blonde"
+        "color": "Golden Blonde"
       }, {
         "name": "Emerald",
         "location": "Making A Difference Rescue",
-        "age": "7 months",
+        "age": "7 months old",
         "photo": [
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52000128/1/?bust=1632251075&width=720",
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52000128/2/?bust=1632251075&width=720",
@@ -272,7 +272,7 @@ const Dogs = require('../models/dogs');
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52000128/4/?bust=1632251077&width=720"
         ],
         "tagline": "Water lover",
-        "description": "Emerald is so quick to learn And is one of the biggest of the litter. She is very sweet and loving. She even loves water now! She loves helping kids relax at her Montessori school. She's working on her recall and loves other dogs. We are not sure how she will do with cats. She is ready for her forever home! Everyone needs a virtual learning buddy! Back to school can be a stressful time, especially in this brave new world of e-learning. Studies show that petting a dog can reduce stress and help increase focus. Emerald here is the perfect companion for your small human! Soft and snuggly, she loves nothing more than to curl up next to your little providing moral support during video time and keep their feet warm while they plug away at writing sentences or during live classes. And she's always up for a game a tag or running zoomies during break time! UTD on shots, fixed and (nearly) potty trained Emmie gets along great with other doggos and ADORES the littles.",
+        "description": "Emerald is so quick to learn and was one of the biggest of her litter. She is very sweet and loving, she even loves water now! She loves helping kids relax at her Montessori school. She's working on her recall and loves other dogs. We are not sure how she will do with cats. She is ready for her forever home! Everyone needs a virtual learning buddy! Back to school can be a stressful time, especially in this brave new world of e-learning. Studies show that petting a dog can reduce stress and help increase focus. Emerald here is the perfect companion for your small human! Soft and snuggly, she loves nothing more than to curl up next to your child, providing moral support during video time and keeping their feet warm while they plug away at writing sentences or during live classes. And she's always up for a game of tag or running zoomies during break time! UTD on shots, fixed and (nearly) potty trained Emmie gets along great with other doggos and ADORES the littles.",
         "breed": [
           "Mixed Breed"
         ],
@@ -281,13 +281,13 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "female",
+        "sex": "Female",
         "fixed": true,
-        "color": "brown, black, and white"
+        "color": "Brown, Black, and White"
       }, {
         "name": "Shandy",
         "location": "Making A Difference Rescue",
-        "age": "4 years",
+        "age": "4 years old",
         "photo": [
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52879139/1/?bust=1630781625&width=720",
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52879139/2/?bust=1630781626&width=720",
@@ -295,7 +295,7 @@ const Dogs = require('../models/dogs');
           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/52879139/4/?bust=1630781628&width=720"
         ],
         "tagline": "Smart and playful",
-        "description": "Shandy is such a gentle soul. He is a tall, lean and lanky fella who loves snuggly blankets, taking walks and playing with friends. Shandy has been around other dogs of all sizes, and does well with everyone. He knows to be gentle with the tiny humans, and loves to play with children. This boy is sugar sweet and so well behaved. He is house and crate trained, walks well on a leash, and knows basic commands.",
+        "description": "Shandy is such a gentle soul. She is a tall, lean and lanky girl who loves snuggly blankets, taking walks and playing with friends. Shandy has been around other dogs of all sizes, and does well with everyone. She knows to be gentle with the tiny humans, and loves to play with children. This girl is sugar sweet and so well behaved. She is house and crate trained, walks well on a leash, and knows basic commands.",
         "breed": [
           "Lab"
         ],
@@ -304,9 +304,9 @@ const Dogs = require('../models/dogs');
         "goodWithKids": true,
         "houseTrained": true,
         "vaccinated": true,
-        "sex": "female",
+        "sex": "Female",
         "fixed": true,
-        "color": "black"
+        "color": "Black"
       }
     ]);
 
