@@ -9,7 +9,8 @@ const placeSchema = mongoose.Schema({
         state: {type: String},
         zip: {type: Number}
     },
-    distance: {type: Number}
+    distance: {type: Number},
+    fee: {type: Number}
 });
 
 module.exports = mongoose.model('Place', placeSchema);
