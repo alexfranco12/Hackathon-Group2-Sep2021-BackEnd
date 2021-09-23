@@ -10,7 +10,7 @@ const dogSchema = mongoose.Schema({
     breed: [{ type: String, required: true }],
     weight: {type: Number},
     goodWithDogs: {type: Boolean},
-    houseTrainer: {type: Boolean},
+    houseTrained: {type: Boolean},
     vaccinated: {type: Boolean},
     sex: {type: String},
     fixed: {type: Boolean},

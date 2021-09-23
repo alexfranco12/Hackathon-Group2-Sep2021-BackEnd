@@ -1,11 +1,20 @@
 [
   {
-    "name": "Brandy",
-    "age": 11,
-    "description": "Sweet girl",
+    "name": "",
+    "location": "",
+    "age": ,
+    "photo": "",
+    "tagline": "",
+    "description": "",
     "breed": [
-      "Golden Retriever"
+      ""
     ],
-    "color": "Brown"
+    "weight": ,
+    "goodWithDogs": ,
+    "houseTrained": ,
+    "vaccinated": ,
+    "sex": "",
+    "fixed": ,
+    "color": ""
   }
 ]
