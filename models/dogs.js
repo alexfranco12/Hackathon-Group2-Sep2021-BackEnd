@@ -5,9 +5,15 @@ const dogSchema = mongoose.Schema({
     location: mongoose.ObjectId,
     age: {type: Number, title: 'Age', required: true},
     photo: {type: String, title: 'Photo'},
+    tagline: {type: String},
     description: {type: String, title: 'Description'},
     breed: [{ type: String, required: true }],
-    size: {type: String, enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL']},
+    weight: {type: Number},
+    goodWithDogs: {type: Boolean},
+    houseTrainer: {type: Boolean},
+    vaccinated: {type: Boolean},
+    sex: {type: String},
+    fixed: {type: Boolean},
     color: {type: String}
 });
 
