@@ -17,6 +17,8 @@ This site was developed to help people on their dog search journey.  Through res
 
 The journey to create this project started with the question, "What is the hardest part about adopting a dog?"  After asking people this quesion we ended up with two answers: where to go to find dogs that are available to adopt, and getting the chance to meet and spend time with the dog in a friendly environment before making a decision.  To solve these problems we set out to build a service that could bring adoption services and adopters together.  By aggregating the information on available dogs and providing the ability to request a playdate, we can assist both parties involved in making this process easier.  For the adoption services we provide a simple interface with unique features that creates predictability in their workflow, and for adopters we provide a one-stop-shop to maximize their options and give a unique feature that previously was difficult to accomplish.
 
+In addition to user research, we analyzed the competitive landscape to identify gaps in the adoption services industry. No other competitor sites offered a way to reserve playdates with the potential adoptee dogs. We also drew design inspiration from comparative services such as dating and vacation rental apps. From there we created an MVP low-fidelity prototype and tested it with users before creating a design system and iterating to high-fidelity. We communicated and collaborated across design and development teams to ensure that the product solved for user needs while remaining technologically feasible.
+
 ### Technologies Used
 - Express
 - MongoDB
