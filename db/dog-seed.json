@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Brandy",
+    "age": 11,
+    "description": "Sweet girl",
+    "breed": [
+      "Golden Retriever"
+    ],
+    "color": "Brown"
+  }
+]

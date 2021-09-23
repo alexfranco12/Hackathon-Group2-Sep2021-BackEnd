@@ -5,15 +5,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const db = mongoose.connection;
-const axios = require('axios');
 
 // CONFIG
 const app = express();
 const PORT = process.env.PORT || 3003;
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = 
+    process.env.NODE_ENV === "production"
+    ? process.env.MONGODB_URI
+    : "mongodb://localhost/hackathon";
 
 // MIDDLEWARE
-app.use(express.json);
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // CORS
@@ -30,17 +32,24 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Database Error/Disconnection
-mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'));
-mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
+db.on('error', err => console.log(err.message + ' is Mongod not running?'));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Database Connection
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useFindAndModify: false
-});
+})
+// The connect method is asynchronous, so we can use
+// .then/.catch to run callback functions
+// when the connection is opened or errors out.
+.then((instance) =>
+console.log(`Connected to db: ${instance.connections[0].name}`)
+)
+.catch((error) => console.log("Connection failed!", error));
 
-mongoose.connection.once('open', () => {
+db.once('open', () => {
     console.log('connected to mongoose...')
 });
 
