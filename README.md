@@ -35,10 +35,14 @@ In addition to user research, we analyzed the competitive landscape to identify 
 - Google Workspace
 - Zoom
 
-#### Future Updates
+### Future Updates
 - Additional routes to improve front end functionality for search
 - Authorization and validation for users
 - User profiles
 - Registration and profiles for shelters, rescues, and pet adoption services
 - AWS S3 Bucket for image upload rather than links
 - Ability for adoption services to add dogs to their database with full CRUD
+
+#### GitHub Repositories
+- [Front End](https://github.com/jdiket/hackathon-group2-sep2021-frontend)
+- [Back End](https://github.com/jdiket/Hackathon-Group2-Sep2021-BackEnd)
