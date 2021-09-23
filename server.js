@@ -29,7 +29,7 @@ const corsOptions = {
         }
     }
 };
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Database Error/Disconnection
 db.on('error', err => console.log(err.message + ' is Mongod not running?'));
