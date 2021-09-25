@@ -5,6 +5,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const db = mongoose.connection;
+const logger = require('morgan')
 
 // CONFIG
 const app = express();
@@ -17,6 +18,7 @@ const MONGODB_URI =
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(logger('dev'));
 
 // CORS
 const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/dogs'];
@@ -50,14 +52,18 @@ console.log(`Connected to db: ${instance.connections[0].name}`)
 .catch((error) => console.log("Connection failed!", error));
 
 db.once('open', () => {
-    console.log('connected to mongoose...')
+    console.log('connected to mongoose...');
 });
 
 // Controllers
+
+app.use('/dogs/users', require('./routes/users'));
+
+const ensureLoggedIn = require('./config/ensureLoggedIn');
 const dogsController = require('./controllers/dogs.js');
 const placesController = require('./controllers/places.js'); 
 app.use('/dogs', dogsController);
 app.use('/places', placesController);
 
 // LISTENER
-app.listen(PORT, () => { console.log('five by five on ', PORT) });
+app.listen(PORT, () => { console.log('five by five on', PORT) });
