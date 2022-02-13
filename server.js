@@ -10,7 +10,7 @@ const logger = require('morgan')
 // CONFIG
 const app = express();
 const PORT = process.env.PORT || 3003;
-const MONGODB_URI = 
+const MONGODB_URI =
   process.env.NODE_ENV === "production"
   ? process.env.MONGODB_URI
   : "mongodb://localhost/dogs";
@@ -21,19 +21,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
 // CORS
-const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/dogs'];
-var corsOptionsDelegate = function (req, callback) {
-  var corsOptions;
-  var error = null;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  } else {
-    error = new Error('Not allowed by CORS')
-    corsOptions = { origin: false } // disable CORS for this request
+const whitelist = ['http://localhost:3000', 'http://localhost:3003', 'mongodb://localhost:27017/dogs'];
+app.use(cors({
+  origin: function(origin, callback){
+    // allow requests with no origin 
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    if(whitelist.indexOf(origin) === -1){
+      var msg = 'The CORS policy for this site does not ' +
+                'allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
   }
-  callback(error, corsOptions) // callback expects two parameters: error and options
-}
-app.use(cors(corsOptionsDelegate));
+}));
 
 // Database Error/Disconnection
 db.on('error', err => console.log(err.message + ' is Mongod not running?'));
