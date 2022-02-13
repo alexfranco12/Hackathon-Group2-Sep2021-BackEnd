@@ -11,9 +11,9 @@ const logger = require('morgan')
 const app = express();
 const PORT = process.env.PORT || 3003;
 const MONGODB_URI = 
-    process.env.NODE_ENV === "production"
-    ? process.env.MONGODB_URI
-    : "mongodb://localhost/dogs";
+  process.env.NODE_ENV === "production"
+  ? process.env.MONGODB_URI
+  : "mongodb://localhost/dogs";
 
 // MIDDLEWARE
 app.use(express.json());
@@ -22,16 +22,18 @@ app.use(logger('dev'));
 
 // CORS
 const whitelist = ['http://localhost:3000', 'mongodb://localhost:27017/dogs'];
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-};
-app.use(cors());
+var corsOptionsDelegate = function (req, callback) {
+  var corsOptions;
+  var error = null;
+  if (whitelist.indexOf(req.header('Origin')) !== -1) {
+    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  } else {
+    error = new Error('Not allowed by CORS')
+    corsOptions = { origin: false } // disable CORS for this request
+  }
+  callback(error, corsOptions) // callback expects two parameters: error and options
+}
+app.use(cors(corsOptionsDelegate));
 
 // Database Error/Disconnection
 db.on('error', err => console.log(err.message + ' is Mongod not running?'));
@@ -39,9 +41,9 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Database Connection
 mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useFindAndModify: false
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  // useFindAndModify: false
 })
 // The connect method is asynchronous, so we can use
 // .then/.catch to run callback functions
