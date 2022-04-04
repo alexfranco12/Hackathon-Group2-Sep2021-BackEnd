@@ -2,11 +2,13 @@
 require('dotenv').config();
 
 const express = require('express'),
-      // cookieParser = require('cookie-parser'),
+      cookieParser = require('cookie-parser'),
       cors = require('cors'),
       logger = require('morgan'),
+      multer = require('multer'),
+      upload = multer(),
       app = express(),
-      PORT = process.env.PORT || 3003;
+      PORT = process.env.PORT || 3003,
       NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.set('port', PORT);
@@ -15,11 +17,11 @@ app.set('env', NODE_ENV);
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cookieParser());
+app.use(cookieParser());
 app.use(logger('dev'));
 
 // parse multipart/form-data
-// app.use(upload.array()); 
+app.use(upload.array()); 
 app.use(express.static('public'));
 
 // CORS
@@ -38,12 +40,6 @@ app.use(cors({
   }
 }));
 
-// Controllers
-// app.use('/dogs/users', require('./routes/users'));
-// const ensureLoggedIn = require('./config/ensureLoggedIn');
-// const placesController = require('./controllers/places.js'); 
-// app.use('/places', placesController);
-
 require('./routes')(app);
 
 // catch 404
@@ -60,9 +56,11 @@ app.use((err, req, res, next) => {
   res.status(status).send({ status, error: msg });
 });
 
+module.exports = app;
+
 // LISTENER
 app.listen(PORT, () => { 
   console.log(
-    `five by five on ${app.get('port')} | Environment: ${app.get('env')}`
+    `five by five on port ${app.get('port')} | Environment: ${app.get('env')}`
   ) 
 });

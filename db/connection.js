@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"), 
-      MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogs";
+   MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogs";
 
 // Database Error/Disconnection
 const db = mongoose.connection;
@@ -18,3 +18,6 @@ mongoose.connect(MONGODB_URI, {
 db.once('open', () => {
     console.log('connected to mongoose...');
 });
+
+// Export mongoose so we can use it elsewhere
+module.exports = mongoose;
