@@ -1,24 +1,26 @@
 // DEPENDENCIES
 require('dotenv').config();
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const db = mongoose.connection;
-const logger = require('morgan')
+const express = require('express'),
+      // cookieParser = require('cookie-parser'),
+      cors = require('cors'),
+      logger = require('morgan'),
+      app = express(),
+      PORT = process.env.PORT || 3003;
+      NODE_ENV = process.env.NODE_ENV || 'development';
 
-// CONFIG
-const app = express();
-const PORT = process.env.PORT || 3003;
-const MONGODB_URI =
-  process.env.NODE_ENV === "production"
-  ? process.env.MONGODB_URI
-  : "mongodb://localhost/dogs";
+app.set('port', PORT);
+app.set('env', NODE_ENV);
 
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(cookieParser());
 app.use(logger('dev'));
+
+// parse multipart/form-data
+// app.use(upload.array()); 
+app.use(express.static('public'));
 
 // CORS
 const whitelist = ['http://localhost:3000', 'http://localhost:3003', 'mongodb://localhost:27017/dogs'];
@@ -36,37 +38,31 @@ app.use(cors({
   }
 }));
 
-// Database Error/Disconnection
-db.on('error', err => console.log(err.message + ' is Mongod not running?'));
-db.on('disconnected', () => console.log('mongo disconnected'));
+// Controllers
+// app.use('/dogs/users', require('./routes/users'));
+// const ensureLoggedIn = require('./config/ensureLoggedIn');
+// const placesController = require('./controllers/places.js'); 
+// app.use('/places', placesController);
 
-// Database Connection
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  // useFindAndModify: false
-})
-// The connect method is asynchronous, so we can use
-// .then/.catch to run callback functions
-// when the connection is opened or errors out.
-.then((instance) =>
-console.log(`Connected to db: ${instance.connections[0].name}`)
-)
-.catch((error) => console.log("Connection failed!", error));
+require('./routes')(app);
 
-db.once('open', () => {
-    console.log('connected to mongoose...');
+// catch 404
+app.use((req, res, next) => {
+  // log.error(`Error 404 on ${req.url}.`);
+  res.status(404).send({ status: 404, error: 'Not found' });
 });
 
-// Controllers
-
-app.use('/dogs/users', require('./routes/users'));
-
-const ensureLoggedIn = require('./config/ensureLoggedIn');
-const dogsController = require('./controllers/dogs.js');
-const placesController = require('./controllers/places.js'); 
-app.use('/dogs', dogsController);
-app.use('/places', placesController);
+// catch errors
+app.use((err, req, res, next) => {
+  const status = err.status || 500;
+  const msg = err.error || err.message;
+  // log.error(`Error ${status} (${msg}) on ${req.method} ${req.url} with payload ${req.body}.`);
+  res.status(status).send({ status, error: msg });
+});
 
 // LISTENER
-app.listen(PORT, () => { console.log('five by five on', PORT) });
+app.listen(PORT, () => { 
+  console.log(
+    `five by five on ${app.get('port')} | Environment: ${app.get('env')}`
+  ) 
+});
